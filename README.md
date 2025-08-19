@@ -1,28 +1,33 @@
 # Wealth Estimator Vision
 
-##### A FastAPI-based application that estimates net worth using vector search with FAISS and embedding logic.
+##### A FastAPI-based application that estimateswealth status of aan individual based on selfie image. Project uses FAISS index similarity to find top3 nearest match from the knowledge base and return estimated wealth along with  nearest matched profiles from the knowledge base.
+
 ## 🧠 Project Structure
- ├wealth_estimator_image_app/
+```
+ ├ wealth_estimator_image_app/
  ├── app/
  │   ├── __init__.py
  │   ├── main.py                  # FastAPI app entrypoint with uvicorn.run()
  │   ├── helper.py                # Embedding + FAISS logic
+ ├── embeddings/
 │   ├── faiss_index.index        # FAISS index file
-│   ├── embedding_store.pkl      # Metadata (e.g., net worth, labels, etc.)
+│   ├── embeddings.npy
+│   ├── metadata.pkl
 ├── requirements.txt
 ├── Dockerfile
-├── generate_faiss_index.py
+├── generate_embedding_and_faiss_index.py
 ├── Makefile
-├──database_embeddings.py
 |─ .gitignore
+├── start.sh
 ├── README.md
+```
 ---
 ### Assumptions
 📝 Assumptions & Key Points
-- This project uses FAISS and precomputed image embeddings for similarity search.
 - Only image files in .png or .jpeg/.jpg format are supported.
 - Embeddings were generated using a pre-trained CLIP model to convert images into vector representations.
-- For simplicity, the FAISS index (faiss_index.index) and embedding metadata (embedding_store.pkl) are precomputed and loaded.
+- This project uses FAISS and image embeddings for similarity search.
+- For simplicity and demo, the FAISS index (faiss_index.index) embeddings, metadata (embedding_store.pkl) are loaded. These can be replaced with managed database.
 
 ### 🚀 Run the App with Docker
 #### 🔨 Build the Docker image
