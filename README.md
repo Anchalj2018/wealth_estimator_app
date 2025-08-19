@@ -2,12 +2,11 @@
 
 ##### A FastAPI-based application that estimates net worth using vector search with FAISS and embedding logic.
 ## 🧠 Project Structure
-wealth_estimator_vision/
-├wealth_estimator_image_app/
-├── app/
-│   ├── __init__.py
-│   ├── main.py                  # FastAPI app entrypoint with uvicorn.run()
-│   ├── helper.py                # Embedding + FAISS logic
+ ├wealth_estimator_image_app/
+ ├── app/
+ │   ├── __init__.py
+ │   ├── main.py                  # FastAPI app entrypoint with uvicorn.run()
+ │   ├── helper.py                # Embedding + FAISS logic
 │   ├── faiss_index.index        # FAISS index file
 │   ├── embedding_store.pkl      # Metadata (e.g., net worth, labels, etc.)
 ├── requirements.txt
@@ -44,9 +43,7 @@ pip install -r requirements.txt
 > ⚠️ **Note**: If you run the app locally (not in Docker), make sure to set the `PYTHONPATH` so that imports like `app.helper` work correctly.
 On macOS/Linux:
 ```bash
-PYTHONPATH=. python3 app/main.py
-##### Run the FastAPI app other wise as 
-python3 app/main.py
+uvicorn app.main:app --host 0.0.0.0 --port 8000 
 ```
 ### 🔍 After Running the App (Docker or Local)
 Once the app is running, you can verify it's working by visiting:
