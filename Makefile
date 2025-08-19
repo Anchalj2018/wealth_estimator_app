@@ -13,3 +13,4 @@ run:
 # View log output
 logs:
 	tail -f log/model.log
+
