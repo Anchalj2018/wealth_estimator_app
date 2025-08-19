@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pkl
+*.sqlite3
+*.env
+*.DS_Store
+*.log
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Mac system files
+.DS_Store
+
+# Docker
+*.tar
+data/
+
