@@ -2,12 +2,11 @@
 
 ##### A FastAPI-based application that estimates net worth using vector search with FAISS and embedding logic.
 ## 🧠 Project Structure
-wealth_estimator_vision/
-├wealth_estimator_image_app/
-├── app/
-│   ├── __init__.py
-│   ├── main.py                  # FastAPI app entrypoint with uvicorn.run()
-│   ├── helper.py                # Embedding + FAISS logic
+ ├wealth_estimator_image_app/
+ ├── app/
+ │   ├── __init__.py
+ │   ├── main.py                  # FastAPI app entrypoint with uvicorn.run()
+ │   ├── helper.py                # Embedding + FAISS logic
 │   ├── faiss_index.index        # FAISS index file
 │   ├── embedding_store.pkl      # Metadata (e.g., net worth, labels, etc.)
 ├── requirements.txt
