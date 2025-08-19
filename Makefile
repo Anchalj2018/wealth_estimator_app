@@ -8,7 +8,7 @@ dev:
 
 # Run server in production mode (no auto-reload)
 run:
-	python3 app/main.py
+	uvicorn app.main:app --host 0.0.0.0 --port 8000 
 
 # View log output
 logs:
