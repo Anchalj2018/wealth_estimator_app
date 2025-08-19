@@ -30,4 +30,5 @@ venv/
 # Docker
 *.tar
 data/
+log/
 
